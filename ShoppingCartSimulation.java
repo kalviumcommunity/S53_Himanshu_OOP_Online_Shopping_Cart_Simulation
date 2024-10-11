@@ -11,7 +11,7 @@ public class ShoppingCartSimulation {
         cart.addItem(item2);
 
         cart.displayCart();
-        ShoppingCart.TotalItemCount = 0;
+        // ShoppingCart.getTotalItemCount();
         cart.displayTotalCount();
         
     }

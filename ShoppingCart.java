@@ -33,6 +33,6 @@ public class ShoppingCart {
         System.out.println("Total Cost: " + calculateTotal());
     }
     public void displayTotalCount(){
-    System.out.println("Total ItemCount: " + TotalItemCount);
+    System.out.println("Total ItemCount: " + getTotalItemCount());
     }
 }

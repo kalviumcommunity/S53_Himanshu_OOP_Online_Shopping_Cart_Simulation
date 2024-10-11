@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class ShoppingCart {
 
     private ArrayList<Item> cartItems;
+    public static int TotalItemCount= 0;
 
     public ShoppingCart() {
         this.cartItems = new ArrayList<>();
@@ -10,10 +11,14 @@ public class ShoppingCart {
 
     public void addItem(Item item) {
         cartItems.add(item);
+        TotalItemCount++;
+    }
+    public static int getTotalItemCount(){
+        return TotalItemCount;
     }
 
+    public static double total = 0.0;
     public double calculateTotal() {
-        double total = 0.0;
         for (Item item : cartItems) {
             total += item.getTotalPrice();
         }
@@ -26,5 +31,8 @@ public class ShoppingCart {
             item.displayItem();
         }
         System.out.println("Total Cost: " + calculateTotal());
+    }
+    public void displayTotalCount(){
+    System.out.println("Total ItemCount: " + TotalItemCount);
     }
 }

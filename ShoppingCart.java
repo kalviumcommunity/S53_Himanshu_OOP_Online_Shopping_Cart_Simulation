@@ -35,4 +35,8 @@ public class ShoppingCart {
     public void displayTotalCount(){
     System.out.println("Total ItemCount: " + getTotalItemCount());
     }
+    public void setCartItems(ArrayList<Item> cartItems) {
+        this.cartItems = cartItems;
+        TotalItemCount = cartItems.size(); 
+    }
 }

@@ -31,6 +31,5 @@ public class ShoppingCartSimulation {
         cart.displayCart();
         // ShoppingCart.getTotalItemCount();
         cart.displayTotalCount();
-        
     }
 }

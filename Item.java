@@ -3,23 +3,25 @@ public class Item {
     private double itemPrice;
     private int itemQuantity;
 
-    // public Item(String name, double price, int quantity) {
-    //     this.itemName = name;
-    //     this.itemPrice = price;
-    //     this.itemQuantity = quantity;
-    // }
+
+
+    public Item(){
+        this.itemName="MamyPoko Paints";
+        this.itemPrice=200;
+        this.itemQuantity=5;
+    }
 
     // Setter
 
-    public void setName(String name){
-        this.itemName = name;
-    }
-    public void setPrice(double price){
-        this.itemPrice = price;
-    }
-    public void setQuantity(int quantity){
-        this.itemQuantity = quantity;
-    }
+    // public void setName(String name){
+    //     this.itemName = name;
+    // }
+    // public void setPrice(double price){
+    //     this.itemPrice = price;
+    // }
+    // public void setQuantity(int quantity){
+    //     this.itemQuantity = quantity;
+    // }
     
 
     // getter
@@ -34,6 +36,11 @@ public class Item {
         
     }
 
+    public Item(String name, double price, int quantity) {
+        this.itemName = name;
+        this.itemPrice = price;
+        this.itemQuantity = quantity;
+    }
 
     public double getTotalPrice() {
         return itemPrice * itemQuantity;
@@ -42,5 +49,5 @@ public class Item {
     public void displayItem() {
         System.out.println("Item: " + itemName + ", Price: " + itemPrice + ", Quantity: " + itemQuantity);
     }
-
+    
 }

@@ -1,7 +1,7 @@
 public class ShoppingCart extends AbstractCart {
 
     @Override
-    public void addItem(Item item) {
+    public void addItem(DisplayAddedItem item) {
         cartItems.add(item);
         TotalItemCount++;
     }
@@ -9,7 +9,7 @@ public class ShoppingCart extends AbstractCart {
     @Override
     public double calculateTotal() {
         total = 0.0;
-        for (Item item : cartItems) {
+        for (DisplayAddedItem item : cartItems) {
             total += item.getTotalPrice();
         }
         return total;

@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 public abstract class AbstractCart {
-    protected ArrayList<Item> cartItems;
+    protected ArrayList<DisplayAddedItem> cartItems;
     public static int TotalItemCount = 0;
     public static double total = 0.0;
 
@@ -11,7 +11,7 @@ public abstract class AbstractCart {
     }
 
     // Abstract method for adding an item
-    public abstract void addItem(Item item);
+    public abstract void addItem(DisplayAddedItem item);
 
     // Abstract method to calculate total cost
     public abstract double calculateTotal();
@@ -24,7 +24,7 @@ public abstract class AbstractCart {
     // Method to display all items in the cart
     public void displayCart() {
         System.out.println("Shopping Cart:");
-        for (Item item : cartItems) {
+        for (DisplayAddedItem item : cartItems) {
             item.displayItem();
         }
         System.out.println("Total Cost: " + calculateTotal());
@@ -36,7 +36,7 @@ public abstract class AbstractCart {
     }
 
     // Setter for cart items
-    public void setCartItems(ArrayList<Item> cartItems) {
+    public void setCartItems(ArrayList<DisplayAddedItem> cartItems) {
         this.cartItems = cartItems;
         TotalItemCount = cartItems.size();
     }
